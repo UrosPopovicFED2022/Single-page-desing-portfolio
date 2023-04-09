@@ -1,0 +1,51 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  &__content {
+    position: relative;
+    max-width: 275px;
+    height: 180px;
+  }
+
+  &__slides {
+    display: none;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__button:hover {
+    background-color: $color-purple;
+    transition: 0.5s;
+  }
+
+  &__button {
+    display: block;
+    background-color: $color-black;
+    border: none;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slider {
+    &__content {
+      max-width: 540px;
+      height: 360px;
+    }
+  }
+}

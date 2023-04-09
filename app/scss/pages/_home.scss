@@ -1,0 +1,103 @@
+.home {
+  &__content {
+    padding: 16px 0px 32px 0px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    &__logo {
+      width: 48px;
+      height: 48px;
+    }
+
+    &__button {
+      @include button;
+      padding: 14px 28px;
+      background-color: $color-black;
+    }
+
+    &__button:hover,
+    :active {
+      background-color: $color-purple;
+      transition-duration: 0.3s;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: $font-size-700;
+    color: $color-black;
+    line-height: 45px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: $font-size-200;
+    padding: 0px 25px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    .header {
+      margin-bottom: 64px;
+      &__logo {
+        width: 64px;
+        height: 64px;
+      }
+
+      &__button {
+        padding: 15px 45px;
+      }
+    }
+
+    &__content {
+      padding: 34px 0px 32px 0px;
+    }
+
+    &__heading {
+      font-size: $font-size-900;
+      margin-bottom: 27px;
+    }
+
+    &__text {
+      font-size: $font-size-300;
+      padding: 0 45px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .home {
+    .header {
+      margin-bottom: 66px;
+    }
+
+    &__title {
+      margin-inline: auto;
+    }
+
+    &__content {
+      padding: 34px 0px 40px 0px;
+    }
+
+    &__heading {
+      font-size: $font-size-1000;
+    }
+
+    &__text {
+      width: clamp(780px, 75%, 1200px);
+    }
+  }
+}

@@ -1,0 +1,2 @@
+"use strict";let slideIndex=1;function plusSlides(e){showSlides(slideIndex+=e)}function showSlides(e){let l=document.querySelectorAll(".slider__slides");e>l.length&&(slideIndex=1),e<1&&(slideIndex=l.length);for(let e=0;e<l.length;e++)l[e].style.display="none";l[slideIndex-1].style.display="block"}showSlides(slideIndex);
+//# sourceMappingURL=script.js.map

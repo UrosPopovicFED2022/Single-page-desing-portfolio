@@ -1,0 +1,118 @@
+.footer {
+  &__content {
+    @include display_FlexCol;
+    gap: 42px;
+    padding: 100px 0px 32px 0px;
+  }
+
+  &__description {
+    @include display_FlexColAlignCenter;
+    text-align: center;
+    padding: 48px 24px;
+    gap: 24px;
+    border-radius: 8px;
+    background-color: $color-black;
+  }
+
+  &__title {
+    @include display_FlexCol;
+    gap: 24px;
+  }
+
+  &__heading {
+    font-size: $font-size-500;
+    color: $color-white;
+  }
+
+  &__text {
+    font-size: $font-size-200;
+    color: $color-white;
+  }
+
+  &__box {
+    @include display_FlexAlignCenterSpaceBeetwen;
+  }
+
+  &__button {
+    @include button;
+  }
+
+  &__button--description {
+    padding: 14px 28px;
+    color: $color-white;
+    background-color: $color-red;
+  }
+
+  &__button--box {
+    padding: 14px 28px;
+    color: $color-white;
+    background-color: $color-black;
+  }
+
+  &__button--description:hover {
+    background-color: $color-orange;
+  }
+
+  &__button--box:hover {
+    background-color: $color-purple;
+  }
+
+  &__logo {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    &__description {
+      padding: 56px 75px 64px 75px;
+      gap: 26px;
+    }
+
+    &__heading {
+      font-size: $font-size-600;
+    }
+
+    &__text {
+      font-size: $font-size-300;
+    }
+
+    &__button--description {
+      padding: 14px 45px;
+    }
+
+    &__logo {
+      width: 64px;
+      height: 64px;
+    }
+
+    &__button--box {
+      padding: 14px 45px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    &__description {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: 3fr 209px;
+      padding: 81px 95px 80px 65px;
+      gap: 82px;
+    }
+
+    &__title {
+      text-align: left;
+    }
+
+    &__heading {
+      font-size: $font-size-800;
+    }
+
+    &__text {
+      width: clamp(540px, calc(80% + 100px), 1000px);
+    }
+  }
+}
